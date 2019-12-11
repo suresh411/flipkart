@@ -1,0 +1,73 @@
+<div class="container">
+    
+    <h2>Log in form</h2>
+    <form>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="username" class="form-control" placeholder="Enter Email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" routerLink="/">Submit</button><br>
+        create a new account ?
+        <button type="submit" class="btn btn-primary" routerLink="/register">register</button>
+       
+
+    </form>
+  
+</div>
+
+
+<!-- 
+      <form #f="ngForm" (ngSubmit)="submit(f)">
+          <div class="form-group">
+                <label for="firstName"></label>
+                <input required minlength="3" maxlength="10" pattern="suresh"
+                ngModel name="firstName"
+                 #firstName="ngModel"  type="text"
+                  
+                 (chang)="log(firstName)" 
+                 class="form-control">
+
+
+                <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+
+                    <div *ngIf="firstName.errors.required">firstName is required</div>
+                    <div *ngIf="firstName.errors.minlength">firstName should be minimum 3 char</div>
+                    <div *ngIf="firstName.errors.pattern">firstName doent match</div>
+                   
+                </div>
+          </div>
+
+          <div class="form-group">
+              <label for="comment">comment</label>
+              <textarea ngModel name="comment"  cols="30" rows="10" class="form-control"></textarea>
+          </div>
+
+          <div class="checkbox">
+                <label for="">
+                <input type="checkbox" ngModel name="isSubscribed">subscribe to mailing list
+              
+              </label>
+          </div>
+
+          <div>
+              <label for="contactMethod"></label>
+              <select ngModel  class="form-control" name="contact" id="contactMethod">
+                  <option *ngFor="let method of contactMethods" [value]="method.id">{{mthod.name}}</option>
+              </select>
+          </div>
+
+
+          <button class="btn btn-primary"  >submit</button>
+
+
+          <p>{{f.value | json}}</p>
+
+
+          
+      </form> -->

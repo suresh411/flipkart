@@ -2,8 +2,14 @@
   
   ul li a{
     color: black;
+    
   }
   .dropdown:hover>.dropdown-menu {
     display: block;
+  }
+a{
+    color: black;
+    font-weight: bold;
+    
   }
   
