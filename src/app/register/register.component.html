@@ -1,10 +1,10 @@
-
-<div class="container">
-    <h2>Register form</h2>
-    <h4>Please fill in this form to create an account</h4>
+<!-- 
+<div class="container border justify-content-center w-50">
+    <h2 class="text-center text-danger">Register Form<hr></h2>
+    <h4 class="text-prim">Please fill in this form to create an account:</h4>
     <form>
         <div class="form-group">
-            <label>UserName</label>
+            <label for="i">UserName</label>
             <input type="text" class="form-control" placeholder="UserName" required>
         </div>       
     
@@ -37,4 +37,9 @@
 
     </form>
   
-</div>
+</div> -->
+<app-header></app-header>
+
+<ul *ngFor="let item of cart">
+    <li>{{item.name}}</li>
+  </ul>

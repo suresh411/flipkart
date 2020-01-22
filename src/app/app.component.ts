@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './service.service';
 
 @Component({
@@ -6,15 +6,24 @@ import { ServiceService } from './service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'flipkart';
-  cart = {};
-  cartkeys = [];
+ 
+  carts= [];
   constructor(private product: ServiceService){
   }
-  getCategories(){
-    return this.product.getCats();
+ 
+  ngOnInit() {
+    
   }
+  
+
+
+
+
+  
+
+
   
   
 }

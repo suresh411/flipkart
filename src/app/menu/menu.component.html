@@ -13,7 +13,7 @@
       </ul>
 
 </div> -->
-
+     <app-header></app-header>
 
      <div class="navbar navbar-expand-lg nav ml-10">
        
@@ -167,7 +167,93 @@
       </div>   
       <app-carousel></app-carousel>
       <app-product></app-product>
-      <app-header></app-header>
+      <div  class=""> 
+        <div class="container-fluid">
+                        <div class="row">
+                                
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 col-xl-4 col">
+                                    <img class="img-responsive  img-fluid mx-auto d-bloc"  src="https://www.jagranimages.com/images/10_10_2018-realme_18518818.jpg">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 col-xl-4 col">
+                                    <img class="img-responsive  img-fluid mx-auto d-bloc" src="https://assets.mspimages.in/wp-content/uploads/2018/10/POCO-F1-Offer-on-Flipkart-696x352.jpg">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 col-xl-4 col">
+                                        <img class="img-responsive  img-fluid mx-auto d-bloc" src="https://www.jagranimages.com/images/10_10_2018-realme_18518818.jpg">
+                                </div>
+                
+                       
+                        </div>
+                 
+               <div class="row">
+                        
+                        <ngb-carousel class="col-md-4 img-responsive  img-fluid" >
+                                <ng-template ngbSlide>  
+                                    <img class="img-responsive img-fluid" src="https://rukminim1.flixcart.com/flap/480/480/image/adc5eb3b6e6e4360.jpg?q=50"  alt="Delhi Metro">  
+                                     
+                                </ng-template>  
+                                <ng-template ngbSlide>  
+                                    <img class="img-responsive img-fluid pt-1" src="../assets/f4.jpg" alt="Bangalore Metro" height="10px" width="550px">  
+                                     
+                                </ng-template>  
+                                <ng-template ngbSlide>  
+                                    <img class="img-responsive img-fluid pt-1" src="../assets/f4.jpg" alt="Channai Metro" width="550px">  
+                                     
+                                </ng-template> 
+                        </ngb-carousel>
+                        
+                        <img class="col-md-4 img-responsive img-fluid" src="https://rukminim1.flixcart.com/flap/480/480/image/19742dc709891803.jpg?q=50">
+                        <img class="col-md-4  img-responsive img-fluid" src="https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2019/09/18/101057-s9plus.jpg?itok=myS3BVQW">
+               
+                </div> 
+        
+        
+        </div>
+        <br>
+        
+        <div class="container-fluid">
+                <div class="row"> 
+                        <div  class="col-2 p-2 text-center offer">
+                                <h3>TOP OFFERS
+                                    On Mobiles
+                                </h3><br>
+                                <button class="btn btn-primary">View All</button><br><br><br>
+                                <div class="div">
+        
+                                </div>
+        
+                        </div> 
+        
+                           
+          
+                                   
+                             <div class="col-md-2" *ngFor="let m of mobile">
+                               <div class="card" style="width: 10rem;" >
+                                <img src="{{m.image}}" class="card-img-top img-responsive img-fluid"  alt="...">
+                                <div class="card-img-overlay mt-5 text-center">
+                                  <h4 class="card-title">{{m.name}}</h4>
+                                  <h5 class="card-title">Rs.{{m.price}}</h5>
+                                  
+                                  <p class="card-text">10% dis on icici bank</p>
+                               <a href="javascript:void()" class="btn btn-primary stretched-link" (click)="addToCart(m)">Add to cart</a> 
+                                </div>
+                    
+                        </div>  
+                      
+                       
+                        </div>
+                        
+                      
+        
+                      
+        
+        
+        
+        
+                </div>
+        </div>
+        
+        </div> 
+        
       
 
 

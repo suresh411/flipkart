@@ -12,4 +12,27 @@ a{
     font-weight: bold;
     
   }
+  img{
+    width: auto; 
+     height: 300px;
+}
+
+
+.div  {
+    background-color: rgb(24, 24, 184);
+    height: 105px;
+}
+h5 h4{
+    font-weight: bold;
+}
+.dividerHeading h4 span:before, .dividerHeading h4 span:after, .widget_title h4 span:after, .widget_title h4 span:before {
+    color: #337585;
+    font-size: 10px;
+    content: "\f10c";
+    font-family: fontawesome;
+    display: inline-block;
+}
+.dividerHeading h4 span:before, .widget_title h4 span:before {
+    margin-right: 10px;
+}
   

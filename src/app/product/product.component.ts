@@ -18,11 +18,11 @@ export class ProductComponent implements OnInit {
   }
   addToCart(p:any){
     if(this.servicve.cart.hasOwnProperty(p.id)){
-      this.servicve.cart[p.id]["quantity"] = this.servicve.cart[p.id]["quantity"]+1;
-      this.servicve.cart[p.id]["total"] = this.servicve.cart[p.id]["quantity"]*p.price;
+      this.servicve.cart[p.id]["quantity"] +=1 
+      
     }else{
-      this.servicve.cart[p.id] = {quantity:1,name:p.name,price:p.price,total:p.price};
-      this.servicve.cartkeys.push(p.id);
+      this.servicve.cart[p.id] = p;
+      
     }
   }
 

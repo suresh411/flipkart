@@ -1,0 +1,18 @@
+img{
+    width:150px;
+    height: 180px;
+}
+.btn1{
+   border-radius: 50%;
+   background-color: white;
+   
+}
+
+  .sticky{
+      top: 59px;
+  }
+  .header{
+    top: 125px;
+    height: 100px;
+
+  }

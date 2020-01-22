@@ -26,26 +26,27 @@ export class ServiceService {
 
   products = {
     perfumes:[
-        {id:123,name:"Ferrari",price:6500,brand:"Ferrari",category:"c3",image:this.imgsrc4},
-        {id:124,name:"Yardley",price:3500,brand:"yardley-london",category:"c3",image:this.imgsrc3}
+        {id:123,name:"Ferrari",price:6500,brand:"Ferrari",category:"c3",image:this.imgsrc4, quantity:1},
+        {id:124,name:"Yardley",price:3500,brand:"yardley-london",category:"c3",image:this.imgsrc3, quantity:1}
     ],
-    watches:[{id:125,name:"Diesel",price:1000,brand:"Diesel",category:"c1",image:this.imgsrc2}],
-    mobiles:[{id:126,name:"oneplus 7",price:70000,brand:"oneplus",category:"c4",image:this.imgsrc5}],
+    watches:[{id:125,name:"Diesel",price:1000,brand:"Diesel",category:"c1",image:this.imgsrc2, quantity:1}],
+    mobiles:[{id:126,name:"oneplus 7",price:70000,brand:"oneplus",category:"c4",image:this.imgsrc5, quantity:1}],
     shoes:[
-        {id:127,name:"Nike",price:4800,brand:"Nike",category:"c2",image:this.imgsrc6},
-        {id:128,name:"Puma",price:7500,brand:"Nike",category:"c2",image:this.imgsrc7},
+        {id:127,name:"Nike",price:4800,brand:"Nike",category:"c2",image:this.imgsrc6, quantity:1},
+        {id:128,name:"Puma",price:7500,brand:"Nike",category:"c2",image:this.imgsrc7, quantity:1},
         
 
     ]
   }
+  quantit={};
 
 
   suresh=[
-    {id:11,name:"Mi k20",price:20000,brand:"xiaomi",image:this.imgsrc8},
-{id:12,name:"Vivo",price:12000,brand:"vivo",image:this.imgsrc9},
-{id:13,name:"Oppo",price:16999,brand:"oppo",image:this.imgsrc10},
-{id:14,name:"Hp",price:19999,brand:"realme",image:this.imgsrc11},
-{id:15,name:"Bajaj",price:9999,brand:"xiaomi",image:this.imgsrc12},
+    {id:11,name:"Mi k20",price:20000,brand:"xiaomi",image:this.imgsrc8, quantity:1},
+{id:12,name:"Vivo",price:12000,brand:"vivo",image:this.imgsrc9, quantity:1},
+{id:13,name:"Oppo",price:16999,brand:"oppo",image:this.imgsrc10, quantity:1},
+{id:14,name:"Hp",price:19999,brand:"realme",image:this.imgsrc11, quantity:1},
+{id:15,name:"Bajaj",price:9999,brand:"xiaomi",image:this.imgsrc12, quantity:1},
 
 ]
   getMobs(){
