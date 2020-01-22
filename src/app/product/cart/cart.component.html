@@ -53,22 +53,6 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8">
-        
-          <!-- <div class="card" *ngFor="let item of cartarray let i=index">
-          <div class="col-lg-4">
-                  <img src="{{item.image}}">
-                  <div class="mt-2">
-                    <button class="btn btn-info text-danger btn1 mr-2" (click)="decrement(item)"><b>    -</b></button>
-                    <input type="number" [(ngModel)]="item.quantity"  max="8" class="w-25 text-center">
-                    <button class="btn btn-info text-danger btn1  ml-2" (click)="increment(item)">+</button>
-                  </div>
-          </div>
-          <div class="col-lg-4">
-              <h6 class="text-center" >{{item.name}}</h6>
-              <p class="text-center">{{item.price}}</p>
-              <p class="text-center">{{item.price*item.quantity}}</p>
-          </div>
-        </div> -->
 
         <div class="card" *ngFor="let item of cartarray let i=index" >
           <div class="row">
@@ -76,7 +60,8 @@
           <img class="card-img-left" src="{{item.image}}" alt="Card image cap">
           <div class="mt-2">
             <button class="btn btn-info text-danger btn1 mr-2" (click)="decrement(item)"><b>    -</b></button>
-            <input type="number" [(ngModel)]="item.quantity"  max="8" class="w-25 text-center">
+            <!-- <input type="number" [(ngModel)]="item.quantity"   class="text-center w mx-auto"> -->
+             <span class="border w text-center">{{item.quantity}}</span>
             <button class="btn btn-info text-danger btn1  ml-2" (click)="increment(item)">+</button>
           </div>
         </div>
@@ -85,24 +70,17 @@
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button (click)="remove(item)">Remove</button>
           </div>
         </div>
-      </div>
-        </div>
 
-
-        
-      
       </div>
-      <!-- <div class="header card col-lg-4 sticky-top clear-fix">
-        <h3>Price Details</h3><hr>
-      <p><span>Price({{quatity}} items)</span> <span class="float-right">{{total}}</span></p>
-      <p><span>Delivery Fee:</span> <span class="float-right">&#8377;{{quatity*20}}</span></p>
-      <h6><span>Total Payable</span> <span class="float-right">{{total+20}}</span></h6>
-      </div> -->
+    </div>
+  </div>
       
-     <table class=" table col-lg-3 sticky-top header">
-       <thead><tr><h3 class="text-primary">Price Details</h3></tr></thead>
+      
+     <table class=" table col-lg-4 sticky-top header">
+       <thead><tr><h3>Price Details</h3></tr></thead>
        <tbody>
          <tr>
            <td>Price({{quatity}} items)</td>
@@ -110,14 +88,14 @@
          </tr>
          <tr>
            <td>Delivery Fee:</td>
-           <td>&#8377;{{quatity*20}}</td>
+           <td >&#8377;{{quatity*delivery}}</td>
          </tr>
          <tr>
-           <td>Total Payable:</td>
-           <td>{{total+20}}</td>
+           <td><h6>Total Payable:</h6></td>
+           <td><b>&#8377;{{total+quatity*delivery}}</b></td>
          </tr>
        </tbody>
-       <p>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
+       
      </table>
 
     </div>

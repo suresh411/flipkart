@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -11,6 +12,7 @@ export class CartComponent implements OnInit {
   cartarray = [];
   total=0
    quatity=0
+   delivery=0
 
 
   constructor(private product: ServiceService, private rout:ActivatedRoute) { }
@@ -21,19 +23,40 @@ export class CartComponent implements OnInit {
     this.cartarray=Object.values(this.product.cart)
     this.subtotal()
     this.quanti()
-    this.product.quantit=this.cartarray[this.quatity]
+    this.update()
+    
     
   }
-car={}
+
   subtotal(){
    this.total=0
     for (let i = 0; i < this.cartarray.length; i++) {
          this.total+=(this.cartarray[i].quantity*this.cartarray[i].price)
          this.quanti()
          
-         
     }
   }
+    remove(p){
+      if(delete this.product.cart[p.id]){
+        alert("Are you sure you want to remove this item?")
+        this.cartarray=Object.values(this.product.cart)
+      
+        this.subtotal()
+        this.update()
+  
+        this.quanti()
+      }
+    }
+    update(){
+      this.delivery=0
+      if(this.total>30000){
+        this.delivery=0
+      }else{
+        this.delivery=20
+      }
+    }
+
+  
 
   quanti(){
     this.quatity=0
@@ -59,6 +82,7 @@ car={}
     this.cartarray=Object.values(this.product.cart)
     this.subtotal()
     this.quanti()
+    this.update()
 
   }
   increment(p){
@@ -67,6 +91,7 @@ car={}
         this.cartarray=Object.values(this.product.cart)
     this.subtotal()
     this.quanti()
+    this.update()
     }
 
   }

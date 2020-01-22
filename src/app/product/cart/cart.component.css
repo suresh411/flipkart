@@ -7,6 +7,9 @@ img{
    background-color: white;
    
 }
+.w{
+  width: 50px;
+}
 
   .sticky{
       top: 59px;
@@ -15,4 +18,7 @@ img{
     top: 125px;
     height: 100px;
 
+  }
+  table {
+    border: cadetblue  1px solid;
   }
