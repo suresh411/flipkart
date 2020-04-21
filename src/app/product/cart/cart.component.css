@@ -1,5 +1,5 @@
 img{
-    width:150px;
+    max-width:120px;
     height: 180px;
 }
 .btn1{
@@ -8,17 +8,26 @@ img{
    
 }
 .w{
-  width: 50px;
+  max-width: 50px;
 }
 
   .sticky{
       top: 59px;
   }
   .header{
-    top: 125px;
-    height: 100px;
+    top: 300px;
+    
 
   }
-  table {
-    border: cadetblue  1px solid;
+ 
+  .text-bold{
+    font-weight: bold;
+    color: black;
   }
+  .bute{
+    padding: 0;
+border: none;
+background: none;
+  }
+  
+

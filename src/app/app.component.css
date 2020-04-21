@@ -1,11 +1,6 @@
-.form-control{
-    width: 80%;
-}
-ul li {
-    padding-left: 30px;
-    
-}
 
-ul li a {
-    color: white;
+
+.bg{
+    background-color: #D3D5E7;
+    color: #212121
 }

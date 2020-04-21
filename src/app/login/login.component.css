@@ -1,0 +1,7 @@
+@media (max-width: 767px) {
+    .login {
+        width: 100% !important;
+        /* height: 200px; */
+    }
+
+}

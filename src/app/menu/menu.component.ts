@@ -9,15 +9,12 @@ import { ServiceService } from '../service.service';
 })
 export class MenuComponent implements OnInit {
   mobile=[];
-  mobiles=[
-    {id:1, brand:"mi"},
-    {id:2, brand:"realme"},
-    {id:3, brand:"oppo"},
-    {id:4, brand:"samsung"},
-    {id:5, brand:"vivo"},
-    {id:6, brand:"lenovo"}
-    ];
-
+  mobiles=[];
+  mo=[]
+  
+  
+ 
+    
 
   constructor(private servicve: ServiceService) { 
     
@@ -27,8 +24,23 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.mobile=this.servicve.getMobs();
+    this.mobiles=this.servicve.mobiles.slice(0,6,);
+    // this.mo=this.mobiles.splice(4,0)
+    
+    
+    console.log(this.mobiles)
+    console.log(this.servicve.mobiles)
+    
+    // for (let i = 6; i < this.servicve.mobiles.length; i++) {
+    //   this.mobiles[i]=this.servicve.mobiles[i]
+      
+    // }
+    
     
   }
+  
+  
+  
   addToCart(m:any){
     if(this.servicve.cart.hasOwnProperty(m.id)){
       this.servicve.cart[m.id]["quantity"] = this.servicve.cart[m.id]["quantity"]+1;

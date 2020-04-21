@@ -5,7 +5,25 @@ ul li {
     padding-left: 30px;
     
 }
+.bg{
+    background-color: #2874f0;
+}
 
 ul li a {
     color: white;
+    font-weight: bold;
+}
+.h3{
+    font-size: 50px;
+}
+
+.bt{
+    size: 10px;
+
+}
+.cart{
+    font-size: 20px;
+}
+.logout a{
+    color:black !important;
 }

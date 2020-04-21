@@ -2,6 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Authservice } from '../auth/authservice';
+export interface User {
+  uid: string;
+  email: string;
+  displayName: string;
+  photoURL: string;
+  emailVerified: boolean;
+}
 
 
 @Component({
@@ -11,7 +20,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private route:Router) { 
+  constructor( private route:Router, private ser:ServiceService,private as:AngularFireAuth , public authService: Authservice) { 
+   console.log(as.user)
+   this.as.authState.subscribe(user => {
+     console.log("user",user)
+     
+   })
     
   }
 
@@ -19,13 +33,16 @@ export class LoginComponent implements OnInit {
     email: new FormControl('',[Validators.required,Validators.email]),
     password: new FormControl('',[Validators.required,Validators.nullValidator])
   })
+  forgot(){
+    
+  }
  
-  profile={Email:"sur@gmail.com", Password:"sur"}
+  
  
   onSubmit(){
-     if(this.profile.Email !== this.myform.value.email){
+     if(this.ser.profile.Email !== this.myform.value.email){
        alert("plz enter email address")
-     }else if(this.profile.Password !== this.myform.value.password){
+     }else if(this.ser.profile.Password !== this.myform.value.password){
        alert("plz enter correct password")
      }else{
        this.route.navigate(['/products'])
@@ -53,6 +70,7 @@ export class LoginComponent implements OnInit {
   
 
   ngOnInit() {
+    this.ser.my=this.myform
   }
 
 }

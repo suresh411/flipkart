@@ -1,5 +1,4 @@
 
-  
   ul li a{
     color: black;
     
@@ -12,28 +11,46 @@ a{
     font-weight: bold;
     
   }
-  img{
-    width: auto; 
-     height: 300px;
+  .pa{
+    padding-right: 0px;
+  }
+  .pl{
+    padding-left: 0px;
+  }
+  
+.card-img-top {
+  width: 50%;
+  height: 200px;
 }
+
+.seewhatsnew{
+  font-size: 14px;
+  color: #b2b2b2;
+  font-weight: 400;
+
+}
+
+img{
+  width: auto;
+  height: 260px;
+}
+.bg{
+  background-color: white;
+}
+
 
 
 
 .div  {
     background-color: rgb(24, 24, 184);
-    height: 105px;
+    height: 120px;
 }
-h5 h4{
+h5,h4,h3{
     font-weight: bold;
 }
-.dividerHeading h4 span:before, .dividerHeading h4 span:after, .widget_title h4 span:after, .widget_title h4 span:before {
-    color: #337585;
-    font-size: 10px;
-    content: "\f10c";
-    font-family: fontawesome;
-    display: inline-block;
+
+.display{
+  text-decoration: none;
 }
-.dividerHeading h4 span:before, .widget_title h4 span:before {
-    margin-right: 10px;
-}
+
   

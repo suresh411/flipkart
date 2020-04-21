@@ -47,40 +47,70 @@
     </tr>
   </table> -->
 
-  <app-header></app-header>
+  <!-- <app-header></app-header> -->
+  
+  
+
+
+
 
   <h3 class="bg-dark text-light  py-3 text-center sticky-top sticky">Cart</h3>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-8">
 
-        <div class="card" *ngFor="let item of cartarray let i=index" >
+
+  <div *ngIf="!quatity" class="container-fluid bg py-5 ">
+    
+      <img src="../../../assets/images/cart.png" class="img-responsive img-fluid d-block mx-auto" style="width: 200px;height: 200px;">
+      <h5 class="text-center">Your Cart is Empty!!</h5>
+      <button routerLink="/" class="btn btn-primary d-block mx-auto mt-3">Shop Now</button>
+    
+
+  </div>
+
+  
+
+  <div class="container border">
+    <div *ngIf="quatity">
+      <h5>My Cart<span *ngIf="quatity">({{quatity}})</span></h5>
+    </div>
+    <div class="row ">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+        <div class="card" *ngFor="let item of cartarray let i=index">
           <div class="row">
-          <div class="col-lg-6">
-          <img class="card-img-left" src="{{item.image}}" alt="Card image cap">
-          <div class="mt-2">
-            <button class="btn btn-info text-danger btn1 mr-2" (click)="decrement(item)"><b>    -</b></button>
-            <!-- <input type="number" [(ngModel)]="item.quantity"   class="text-center w mx-auto"> -->
-             <span class="border w text-center">{{item.quantity}}</span>
-            <button class="btn btn-info text-danger btn1  ml-2" (click)="increment(item)">+</button>
-          </div>
-        </div>
-          <div class="col-lg-6">
+            
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                
+                <img class="card-img-left" src="{{item.image}}{{item.img}}" alt="Card image cap">
+                <div class="mt-2">
+                  <button class="btn btn-info text-danger btn1 mr-2" (click)="decrement(item)"><b>-</b></button>
+                  <input type="number" [(ngModel)]="item.quantity"   class="text-center w mx-auto">
+                  
+                  <button class="btn btn-info text-danger btn1  ml-2" (click)="increment(item)">+</button>
+                </div>
+              </div>
+            
+          
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
           <div class="card-body">
-            <h5 class="card-title">{{item.name}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            <button (click)="remove(item)">Remove</button>
+            <h2 class="card-title text-danger">{{item.name}}</h2>
+             <p class="card-text">{{item.features}}</p>
+            <h5 class="card-text">&#8377;{{item.price}}</h5>
+            <button (click)="remove(item)" class="bute text-bold">Remove</button>
           </div>
         </div>
 
       </div>
     </div>
+    <div>
+      
+    </div>
   </div>
+
+  
       
       
-     <table class=" table col-lg-4 sticky-top header">
-       <thead><tr><h3>Price Details</h3></tr></thead>
+     <table *ngIf="quatity" class=" table border col-lg-4  col-md-4 col-sm-12 col-xs-12 sticky-top header">
+       <thead><tr><td><h3>Price Details</h3></td></tr></thead>
        <tbody>
          <tr>
            <td>Price({{quatity}} items)</td>
@@ -99,5 +129,44 @@
      </table>
 
     </div>
+  
+
+   
+   
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12  fixed-bottom border" *ngIf="quatity">
+      <button class="btn btn-danger  float-right my-2" routerLink="/login">PLACE ORDER</button>
+    </div>
+
+   
 
   </div>
+
+
+
+  <div class="container" *ngIf="!quatity">
+    <table class="table border ">
+      <thead>
+        <tr>
+          <th>username</th>
+          <th>mobile number</th>
+        </tr>
+        
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of details |async">
+        <td>{{item.username}}</td>
+        <td>{{item.mobilenum}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  
+  
+  
+  
+  
+  
+
+  

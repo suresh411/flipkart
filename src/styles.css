@@ -1,0 +1,26 @@
+*  {padding: opx; margin: opx;}
+img { max-width: 100%; height: auto; }
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+    img{
+        width: 100%;
+        padding-left: 0px;
+        margin:0px ;
+        border: none;
+        
+    }
+    .pl,.pa{
+        margin-top: 5px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}

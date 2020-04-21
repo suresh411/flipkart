@@ -1,16 +1,45 @@
-<!-- <div class="containe">
+<!-- <app-header></app-header>
+<div class="containe">
     <div class="row">
-      <div class="col-1" *ngFor="let p of getMycategories()">
+      <div class="col-4" >
           <div class="card mb-5" style="width: 18rem;">
-            <img src="{{p.image}}" class="card-img-top" alt="...">
+            <img src="{{singleitem.img}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{p.name}}</h5>
-              <p>{{colour}}</p>
-              <p>{{size}}</p>
+              <h5 class="card-title">{{singleitem.name}}</h5>
+               <h5>{{singleitem.price}}</h5>
+               <p>{{singleitem.features}}</p>
+              
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="javascript:void()" class="btn btn-primary" (click)="addToCart(p)">Add to cart</a>
+              <a href="javascript:void()" class="btn btn-primary" routerLink="../../cart" (click)="addToCart(singleitem)">Add to cart</a>
+              <a href="javascript:void()" class="btn btn-primary" (click)="addToCart(singleitem)">BUY NOW</a>
+
             </div>
           </div>
-      </div>7
+      </div>
     </div>
   </div> -->
+
+  <!-- <app-header></app-header> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div>
+          <img src="{{singleitem.img}}" class="card-img-top" alt="...">
+        </div>
+        <a href="javascript:void()" class="btn btn-primary" routerLink="../../cart" (click)="addToCart(singleitem)">Add to cart</a>
+        <a href="javascript:void()" class="btn btn-primary" (click)="addToCart(singleitem)">BUY NOW</a>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card-body">
+          <h5 class="card-title">{{singleitem.name}}</h5>
+           <h5>{{singleitem.price}}</h5>
+           <p>{{singleitem.features}}</p>
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+     </div>
+
+  </div>
+
+
+ 
